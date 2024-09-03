@@ -102,10 +102,12 @@ export const deleteTrip = async (tripId) => {
                 message.textContent = data.msg;
                 showTrips();
             }
-        } 
-        catch {
-
         }
+        catch {
+            message.textContent = "A communications error has occurred.";
+            showTrips();
+        }
+        enableInput(true);
     }
 }
 
