@@ -10,13 +10,13 @@ let reason = null;
 let addingTrip = null;
 
 export const handleAddEdit = () => {
-    const addEditDiv = document.getElementById("edit-trip");
-    const destination = document.getElementById("destination");
-    const startDate = document.getElementById("startDate");
+    addEditDiv = document.getElementById("edit-trip");
+    destination = document.getElementById("destination");
+    startDate = document.getElementById("startDate");
     // startDate1 = document.getElementById("startDate1");
-    const duration = document.getElementById("duration");
-    const reason = document.getElementById("reason");
-    const addingTrip = document.getElementById("adding-trip");
+    duration = document.getElementById("duration");
+    reason = document.getElementById("reason");
+    addingTrip = document.getElementById("adding-trip");
     const editCancel = document.getElementById("edit-cancel");
 
     addEditDiv.addEventListener("click", async (e) => {
@@ -134,6 +134,7 @@ export const showAddEdit = async (tripId) => {
             });
 
             const data = await response.json();
+            console.log(data);
             if (response.status === 200) {
                 destination.value = data.trip.destination;
                 startDate.value = convertDate(data.trip.startDate);
