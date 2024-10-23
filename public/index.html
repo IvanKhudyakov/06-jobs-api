@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trips List</title>
+</head>
+
+<body>
+    <h1>Trips List</h1>
+    <hr />
+    <p id="message"></p>
+    <hr />
+    <div id="logon-register" style="display:none;">
+        <button type="button" id="logon">Logon</button>
+        <button type="button" id="register">Register</button>
+    </div>
+    <div id="logon-div" style="display:none;">
+        <form>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" />
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" id="password" />
+            </div>
+            <button type="button" id="logon-button">Logon</button>
+            <button type="button" id="logon-cancel">Cancel</button>
+        </form>
+    </div>
+    <div id="register-div" style="display:none;">
+        <form>
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" />
+            </div>
+            <div>
+                <label for="email1">Email:</label>
+                <input type="email" id="email1" />
+            </div>
+            <div>
+                <label for="password1">Password:</label>
+                <input type="password" id="password1" />
+            </div>
+            <div>
+                <label for="password2">Verify password:</label>
+                <input type="password" id="password2" />
+            </div>
+            <button type="button" id="register-button">Register</button>
+            <button type="button" id="register-cancel">Cancel</button>
+        </form>
+    </div>
+    <div id="trips" style="display:none;">
+        <p id="trips-message"></p>
+        <table id="trips-table">
+            <tr id="trips-table-header">
+                <th>Destination</th>
+                <th>Start Date</th>
+                <th>Duration</th>
+                <th>Trip reason</th>
+                <th colspan="2"></th>
+            </tr>
+        </table>
+        <button type="button" id="add-trip">Add trip</button>
+        <button type="button" id="logoff">Log off</button>
+    </div>
+    <div id="edit-trip" style="display:none;">
+        <form>
+            <div>
+                <label for="destination">Destination:</label>
+                <input type="text" id="destination" />
+            </div>
+            <div>
+                <label for="startDate">Start Date:</label>
+                <!-- TODO: implement type = "date" -->
+                <input type="date" id="startDate" /> 
+                <!-- <input type="text" id="startDate1" />  -->
+            </div>
+            <div>
+                <label for="duration">Duration:</label>
+                <input type="text" id="duration" />
+            </div>
+            <div>
+                <label for="reason">Trip reason:</label>
+                <select id="reason">
+                    <option value="business">business</option>
+                    <option value="leasure">leasure</option>
+                    <!-- <option value="declined">declined</option> -->
+                </select>
+            </div>
+            <button type="button" id="adding-trip">Add</button>
+            <button type="button" id="edit-cancel">Cancel</button>
+        </form>
+    </div>
+    <script src="./index.js" type="module"></script>
+</body>
+
+</html>

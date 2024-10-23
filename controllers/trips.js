@@ -63,7 +63,7 @@ const deleteTrip = async (req, res) => {
     if (!trip) {
         throw new NotFoundError(`The trip with id ${tripId} was not found`);
     }
-    res.status(StatusCodes.OK).send('Successfully deleted.');
+    res.status(StatusCodes.OK).json({ msg: 'Trip was successfully deleted.'});
 }
 
 module.exports = {
